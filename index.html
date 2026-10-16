@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BackFocus · Estudio Instagram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700;900&display=swap">
+  <link rel="stylesheet" href="estudio.css">
+</head>
+<body>
+  <header class="cabecera">
+    <h1>BackFocus <small>Estudio Instagram · #01</small></h1>
+    <nav>
+      <a href="#feed">Posts</a>
+      <a href="#carrusel">Carrusel</a>
+      <a href="#historias">Historias</a>
+    </nav>
+    <div class="acciones">
+      <label class="interruptor"><input type="checkbox" id="b-guias"> Mostrar guías</label>
+      <button id="b-copys" type="button">Descargar textos</button>
+      <button id="b-reset-todo" type="button">Restablecer todo</button>
+      <button id="b-todo" class="principal" type="button">Descargar todo (ZIP)</button>
+    </div>
+  </header>
+
+  <p class="ayuda">
+    <b>Cómo se usa:</b> haz clic en cualquier texto de una pieza para editarlo.
+    Arrastra una foto para encuadrarla, usa <b>Zoom foto</b> para acercarla y <b>Cambiar foto</b> (aparece al pasar el mouse) para subir otra.
+    <b>Texto</b> agranda o achica los textos de la pieza. Los cambios se guardan solos en este navegador.
+    <b>Mostrar guías</b> marca en rojo las zonas que Instagram tapa en las historias y el espacio para los stickers; las guías no salen en el PNG.
+  </p>
+
+  <section class="seccion" id="feed">
+    <h2>Posts (carruseles de 3)</h2>
+    <p>Cada post es un carrusel de 3 imágenes de 1080 × 1350 px: una portada y dos slides con foto y texto destacado. Súbelas en orden; el texto para publicar es uno por carrusel.</p>
+    <div class="rejilla post" id="rejilla-feed"></div>
+  </section>
+
+  <section class="seccion" id="carrusel">
+    <h2>Carrusel «Conoce el #01»</h2>
+    <p>Siete diapositivas de 1080 × 1350 px. Súbelas en orden; el texto para publicar está en la primera.</p>
+    <div class="rejilla post" id="rejilla-carrusel"></div>
+  </section>
+
+  <section class="seccion" id="historias">
+    <h2>Historias</h2>
+    <p>Formato 9:16 (1080 × 1920 px). Agrega el sticker de enlace o de encuesta en Instagram, en el espacio marcado por las guías.</p>
+    <div class="rejilla historia" id="rejilla-historias"></div>
+  </section>
+
+  <div class="aviso" id="aviso" role="status"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="datos.js"></script>
+  <script src="fotos.js"></script>
+  <script src="estudio.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Configuración de Render: sitio estático, sin paso de compilación
+services:
+  - type: web
+    name: backfocus-instagram
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
